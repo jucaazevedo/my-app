@@ -1,0 +1,43 @@
+{
+    "Defaults" : {
+        "Application" : "PocSimples",
+        "SubApplication" : "PocSimplesSub",
+        "RunAs" : "workbench",
+        "Host" : "workbench",
+
+        "Job": {
+            "When" : {
+                "Months": ["JAN", "SEP", "DEC"],
+                "MonthDays":["22","1","13"],
+                "WeekDays":["MON","TUE", "WED", "THU", "FRI"],
+                "FromTime":"1002",
+                "ToTime":"1003"
+            },
+            "ActionIfFailure" : {
+                "Type": "If",       
+                "CompletionStatus": "NOTOK",
+                
+                "mailToTeam": {
+                    "Type": "Mail",
+                    "Message": "%%JOBNAME failed",
+                    "To": "joaquim@ciandt.com"
+                }
+            }
+        }
+    },
+
+    "FlowPOC": {
+        "Type": "Folder",
+        "Comment" : "PoC do Control-M 9",
+
+        "JobUnico": {
+            "Type": "Job:Command",
+            "Command": "cd /home/workbench && /home/ctm/ctm_em/JRE/bin/java -version"
+        },
+
+        "Flow": {
+            "Type": "Flow",
+            "Sequence": ["JobUnico"]
+        }
+    }
+}
