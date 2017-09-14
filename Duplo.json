@@ -26,18 +26,18 @@
         }
     },
 
-    "FlowPOC": {
+    "FlowPOCDuplo": {
         "Type": "Folder",
         "Comment" : "PoC do Control-M 9",
 
         "Job1": {
             "Type": "Job:Command",
-            "Command": "cd /home/workbench && /home/ctm/ctm_em/JRE/bin/java -version && wget www.uol.com.br && ls -l ind*"
+            "Command": "cd /home/workbench && /home/ctm/ctm_em/JRE/bin/java -version "
         },
 
         "Job2": {
             "Type": "Job:Command",
-            "Command": "pwd"
+            "Command": "pwd && echo fim"
         },
 
         "Flow": {
