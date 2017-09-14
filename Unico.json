@@ -32,7 +32,7 @@
 
         "JobUnico": {
             "Type": "Job:Command",
-            "Command": "cd /home/workbench && /home/ctm/ctm_em/JRE/bin/java -version"
+            "Command": "cd /home/workbench && wget https://github.com/jucaazevedo/my-app/blob/master/target/my-app-1.0-SNAPSHOT.jar && /home/ctm/ctm_em/JRE/bin/java -jar my-app-1.0-SNAPSHOT.jar"
         },
 
         "Flow": {
