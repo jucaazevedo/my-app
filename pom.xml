@@ -21,6 +21,17 @@
   </dependencies>
   <build>
     <plugins>
+	<plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-compiler-plugin</artifactId>
+		<version>3.5.1</version>
+		<inherited>true</inherited>
+		<configuration>
+			<source>1.7</source>
+			<target>1.7</target>
+			<encoding>UTF-8</encoding>
+		</configuration>
+	</plugin>
       <plugin>
         <!-- Build an executable JAR -->
         <groupId>org.apache.maven.plugins</groupId>
@@ -33,6 +44,9 @@
               <classpathPrefix>lib/</classpathPrefix>
               <mainClass>com.mycompany.app.App</mainClass>
             </manifest>
+            <manifestEntries>
+                        <Build-Java>1.7</Build-Java>
+           </manifestEntries>
           </archive>
         </configuration>
       </plugin>
