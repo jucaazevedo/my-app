@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Build-Java: 1.7
+Built-By: joaquim
+Build-Jdk: 1.8.0_144
+Created-By: Maven Integration for Eclipse
+Main-Class: com.mycompany.app.App
+

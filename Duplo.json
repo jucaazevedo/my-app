@@ -8,10 +8,9 @@
         "Job": {
             "When" : {
                 "Months": ["JAN", "SEP", "DEC"],
-                "MonthDays":["22","1","13"],
-                "WeekDays":["MON","TUE", "WED", "THU", "FRI"],
-                "FromTime":"1002",
-                "ToTime":"1003"
+                "MonthDays":["22","1","13","14","15","18"],
+                "FromTime":"0900",
+                "ToTime":"1800"
             },
             "ActionIfFailure" : {
                 "Type": "If",       
