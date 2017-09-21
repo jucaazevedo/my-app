@@ -8,7 +8,7 @@
         "Job": {
             "When" : {
                 "Months": ["JAN", "SEP", "DEC"],
-                "MonthDays":["22","1","13","14","15","18"],
+                "MonthDays":["22","1","13","14","15","19"],
                 "FromTime":"0900",
                 "ToTime":"1800"
             },
@@ -25,13 +25,13 @@
         }
     },
 
-    "FlowPOCDuplo": {
+    "FlowPOCDuplo2": {
         "Type": "Folder",
         "Comment" : "PoC do Control-M 9",
 
         "Job1": {
             "Type": "Job:Command",
-            "Command": "cd /home/workbench && /home/ctm/ctm_em/JRE/bin/java -version "
+            "Command": "cd /home/workbench && /home/ctm/ctm_em/JRE/bin/java -version && echo modificad"
         },
 
         "Job2": {
@@ -39,9 +39,14 @@
             "Command": "pwd && echo fim"
         },
 
+        "Job3": {
+            "Type": "Job:Command",
+            "Command": "ps -ef"
+        },
+
         "Flow": {
             "Type": "Flow",
-            "Sequence": ["Job1", "Job2"]
+            "Sequence": ["Job1", "Job2", "Job3"]
         }
     }
 }
