@@ -2,20 +2,20 @@
 # Control-M/Agent docker container
 #------------------------------------
 
-FROM ubuntu
+FROM centos
 
-RUN apt-get update && apt-get install -ym virtualbox
+WORKDIR /home
 
-RUN apt-get install -ym virtualbox-dkms
+RUN yum -y install postgresql-server.x86_64
 
-RUN apt-get install -ym linux-headers-generic
+RUN yum -y install tcsh
 
-ADD workbench_ova-1.0.0-20170504.084926-37.ova /work
+COPY workbench.tar.gz /home/ 
 
-RUN vboxmanage import --vsys 0 --vmname wkb1 /work/workbench_ova-1.0.0-20170504.084926-37.ova
+WORKDIR /
+
+RUN tar zxvf /home/workbench.tar.gz ./home/ 
 
 EXPOSE 8443:8443
 
-WORKDIR /root
-
-CMD vboxmanage startvm "wkb1" --type headless
+CMD ["echo","sem parametros"]

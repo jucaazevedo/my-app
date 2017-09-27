@@ -39,14 +39,9 @@
             "Command": "pwd && echo fim"
         },
 
-        "Job3": {
-            "Type": "Job:Command",
-            "Command": "ps -ef"
-        },
-
         "Flow": {
             "Type": "Flow",
-            "Sequence": ["Job1", "Job2", "Job3"]
+            "Sequence": ["Job1", "Job2"]
         }
     }
 }
