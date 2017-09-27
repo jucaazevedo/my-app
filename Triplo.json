@@ -1,0 +1,52 @@
+{
+    "Defaults" : {
+        "Application" : "PocSimples",
+        "SubApplication" : "PocSimplesSub",
+        "RunAs" : "workbench",
+        "Host" : "workbench",
+
+        "Job": {
+            "When" : {
+                "Months": ["JAN", "SEP", "DEC"],
+                "MonthDays":["22","1","13","14","15","19"],
+                "FromTime":"0900",
+                "ToTime":"1800"
+            },
+            "ActionIfFailure" : {
+                "Type": "If",       
+                "CompletionStatus": "NOTOK",
+                
+                "mailToTeam": {
+                    "Type": "Mail",
+                    "Message": "%%JOBNAME failed",
+                    "To": "email@mycomp.com"
+                }
+            }
+        }
+    },
+
+    "FlowPOCTriplo": {
+        "Type": "Folder",
+        "Comment" : "PoC do Control-M 9",
+
+        "Job1": {
+            "Type": "Job:Command",
+            "Command": "cd /home/workbench && /home/ctm/ctm_em/JRE/bin/java -version && echo modificad"
+        },
+
+        "Job2": {
+            "Type": "Job:Command",
+            "Command": "pwd && echo fim"
+        },
+
+        "Job3": {
+            "Type": "Job:Command",
+            "Command": "set"
+        },
+
+        "Flow": {
+            "Type": "Flow",
+            "Sequence": ["Job1", "Job2", "Job3"]
+        }
+    }
+}
