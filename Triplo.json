@@ -46,7 +46,7 @@
 
         "Flow": {
             "Type": "Flow",
-            "Sequence": ["Job1", "Job2", "Job3"]
+            "Sequence": ["Job1", "Job3", "Job2"]
         }
     }
 }
