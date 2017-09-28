@@ -19,7 +19,7 @@
                 "mailToTeam": {
                     "Type": "Mail",
                     "Message": "%%JOBNAME failed",
-                    "To": "email@mycomp.com"
+                    "To": "joaquim@ciandt.com"
                 }
             }
         }
@@ -31,17 +31,17 @@
 
         "Job1": {
             "Type": "Job:Command",
-            "Command": "cd /home/workbench && /home/ctm/ctm_em/JRE/bin/java -version && echo modificad"
+            "Command": "echo Job1"
         },
 
         "Job2": {
             "Type": "Job:Command",
-            "Command": "pwd && echo fim"
+            "Command": "echo Job2"
         },
 
         "Job3": {
             "Type": "Job:Command",
-            "Command": "set"
+            "Command": "echo Job3"
         },
 
         "Flow": {
