@@ -31,7 +31,7 @@
 
         "Job1": {
             "Type": "Job:Command",
-            "Command": "cd /home/workbench && /home/ctm/ctm_em/JRE/bin/java -version && echo modificad"
+            "Command": "cd /home/workbench && /home/ctm/ctm_em/JRE/bin/java -version && echo modificado"
         },
 
         "Job2": {
