@@ -43,10 +43,14 @@
             "Type": "Job:Command",
             "Command": "echo Job3"
         },
+        "Job4": {
+            "Type": "Job:Command",
+            "Command": "echo Eliane chefe"
+        },
 
         "Flow": {
             "Type": "Flow",
-            "Sequence": ["Job1", "Job3", "Job2"]
+            "Sequence": ["Job1", "Job2", "Job3", "Job4"]
         }
     }
 }
